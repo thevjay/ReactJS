@@ -1,12 +1,5 @@
-/**
- * 
- * <div id="parent">
- *      <div id='child'>
- *          <h1></h1>
- *       </div>
- * </div>
- */
-
+import React from "react"
+import ReactDOM from "react-dom/client";
 
 const parent = React.createElement(
     "div",
@@ -15,8 +8,8 @@ const parent = React.createElement(
         React.createElement("div",{id:"child"},
             [ 
                 React.createElement("h1",{id:"heading",xyz:"Abc"},"I'm h1 tag !"),
-                React.createElement("h1",{id:"heading",xyz:"Abc"},"I'm h1 tag !"),
-                React.createElement("h1",{id:"heading",xyz:"Abc"},"I'm h1 tag !")
+                React.createElement("h2",{id:"heading",xyz:"Abc"},"I'm h1 tag !"),
+                React.createElement("h3",{id:"heading",xyz:"Abc"},"I ub gcvytctctc")
             ]
         )
     ],
@@ -29,14 +22,11 @@ const parent = React.createElement(
     )]
 )
 
-const heading = React.createElement(
-    "h1",
-    {id:"heading",xyz:"rooetr"},
-    "Hello World from React!"
-)
+
 
 // JSX
 
+// NPM 
 
 console.log(parent)  // object 
       
