@@ -7,7 +7,9 @@
 - npx parcel build index.html
 - npm install react
 - npm install react-dom
-
+- start the application
+    -     "start": "parcel index.html", -> npm start
+    -     "build": "parcel build index.html", --> npm run build
 
 - Dev Build
 - Local server
@@ -25,3 +27,9 @@
 - HTTPs
 - Tree Shaking - remove unused code
 - Different dev and prod bundles
+
+# Laying the Foundamentals
+- Bracket pair
+- Pretter
+- ESLint
+- Better Comments
