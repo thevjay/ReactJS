@@ -2,46 +2,81 @@ import React from "react"
 import ReactDOM from "react-dom/client";
 
 
-// React Element = React.createElement => Object => HTMLElement(render)
+/**
+ * Header
+ *      - Logo
+ *      - Nav Items
+ * Body
+ *      - Search
+ *      - RestaurantContainer   
+ *          - RestaurantCard
+ *          - Name of Res, star Rating, cuisines, delivery tie
+ * Footer
+ *      - Copyright
+ *      - Links
+ *      - Address
+ *      - Contanct
+ */
 
-// JSX - is not HTML in JS - HTML - Like
-// JSX (transpiled before it reaches the JS) - PARCEL - Babel
-
-// JSX => React.createElement => ReactElement - JS Object - HTML Element(render)
-
-const jsxHeading = (
-    <h1 className="">
-        Namaste react using JSX
-    </h1>
-)
-
-const Title = () =>{
+const Header = () => {
     return (
-        <div className="head">
-            Namaste JSX 
+        <div className="header">
+            <div>
+                <img className="logo" src="https://img.freepik.com/premium-vector/food-logo-design_139869-254.jpg?w=2000" />
+            </div>
+            <div className="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
         </div>
     )
 }
-// React Component
-// Class Based Component - OLD
-// Functional Component - NEW
-
-const data = api.getData();
 
 
-const HeadingComponent = () => {
+const RestaurantCard = ({name,cuisines}) => {
+
+    // const {name,cuisines} = props
+
     return(
-    <div id="container">
-        <h1>{100 + 200}</h1>
-        {data}
-        <Title/>
-        <h1 className="heading">Namaste React Functinal Componet</h1>
-    </div> 
+        <div className="res-card" style={{backgroundColor:"#f0f0f0"}}> 
+            <img 
+                className="res-logo" 
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c7b7f719d710175badabd8a3e646c849"
+            />
+            <h3>{name}</h3>
+            <h4>{cuisines}</h4>
+            <h4>4.4 stars</h4>
+            <h4>38 minutes</h4>
+        </div>
     )
 }
 
-// const fn = () => <h1>Common return</h1>
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="Search">Search</div>
+            <div className="res-container">
+                {
+                    
+                }
+            </div>
+        </div>
+    )
+}
+const App = () => {
+    return (
+        <div className="app">
+            <Header/>
+            <Body/>
+        </div>
+    )
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<HeadingComponent/>)
+root.render(<App/>)
