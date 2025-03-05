@@ -33,3 +33,23 @@
 - Pretter
 - ESLint
 - Better Comments
+
+
+# Two types of Exports/Import
+
+- Default Export / Import
+
+- export default Component
+- import Component from "path
+
+- Named Export/Import
+
+- exprot const Component
+- import {Component} from "path
+
+
+# React Hooks
+- (Normal JS utility Functions)
+- useState() - Superpowerful State 
+- useEffect()
+- 
