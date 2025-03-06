@@ -3,17 +3,18 @@ import RestaurantCard from './RestaurantCard'
 import { useState } from 'react';
 import { RES_URL } from '../utils/constants';
 import Shimmer from './Shimmer';
+import { Link } from 'react-router-dom';
 
 
 const Body = () => {
     // Local State Variable - super powerful variable
     const [listOfRestaurants,setListOfRestaurants] = useState([]);
-    const [searchText,setSearchText] = useState("")
     const [filteredRestaurant,setFilteredRestaurant] = useState([]);
 
+    const [searchText,setSearchText] = useState("")
 
-    // 
-    console.log("body render")
+    console.log("Body Rendered");
+    
     useEffect(()=>{
         fetchData();
     },[]);
@@ -42,9 +43,8 @@ const Body = () => {
                         onClick={()=>{
                             // Filter the restraunt cards update the UI
                             // searchText
-                            console.log(searchText)
                             const filteredRestaurant = listOfRestaurants.filter((res)=>{
-                                res.info.name.toLowerCase().include(searchText);
+                                return res?.info?.name.toLowerCase().includes(searchText.toLowerCase());
                             })
                             setFilteredRestaurant(filteredRestaurant)
                         }}    
@@ -65,7 +65,12 @@ const Body = () => {
             </div>
             <div className="res-container">
                 {filteredRestaurant.map((restaurant)=>(
-                    <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
+                    <Link 
+                        key={restaurant.info.id} 
+                        to={"restaurant/"+restaurant.info.id}
+                    >
+                        <RestaurantCard  resData={restaurant}/>
+                    </Link>
                 ))}
             </div>
         </div>
@@ -73,4 +78,4 @@ const Body = () => {
 }
 
 
-export default Body
+export default Body;

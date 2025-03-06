@@ -57,9 +57,24 @@
 # Monolith && Microservises :
 
 # useEffect :
-
+- // if no dependency array => useEffect is called on every render
+-    // if the dependency array is empty = [] => useEffect is called on initial render(just Once)
+-    // if dependency array is [btnNameReact] => called everytime btnNameReact is updated
+    
 # Shimmer UI :
 
 # Conditional Rendering :-
 
-# 
+# Routing:-
+- npm install react-router-dom
+    - createBrowserRouter([])
+    - RouterProvider router={appLoyout}
+        -   Outlet
+        -   useRouterError
+        -   Link tag
+        -   Dynamic Routing /:resId
+        -   useParams is object we destructure the resId(const {resId} = useParams)
+
+# 2 types Routing in web apps
+- Client Side Routing
+- Server Side Routing
