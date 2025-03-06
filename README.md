@@ -78,3 +78,26 @@
 # 2 types Routing in web apps
 - Client Side Routing
 - Server Side Routing
+
+# Class Based Components
+- H/W - why use super(props)
+- creation of states
+
+# Life Cycle methods:-
+
+/**
+ * - Parent Contructor
+ * - Parent render
+ * 
+ *    - First Constructor
+ *    - First Render
+ * 
+ *    - Second Constructor
+ *    - Second Render
+ *   
+ *   <DOM UPDATED - IN SINGLE BATCH>
+ *    - First ComponentDidMount
+ *    - Second ComponentDidMount
+ * 
+ * - Parent ComponentDidMount
+ */
