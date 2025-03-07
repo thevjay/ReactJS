@@ -115,3 +115,9 @@
  - dynamic import - const Grocery = lazy(()=> import("./components/Grocery"));
  - Suspense
  - fallback
+
+# TailwindCSS:-
+- npm i -D tailwind postcss;
+- npx tailwindcss init;
+- - create the .postcssrc file;
+- - extension tailwindcss intellisense

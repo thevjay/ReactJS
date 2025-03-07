@@ -37,15 +37,16 @@ const Body = () => {
     return  listOfRestaurants.length === 0 ? (<Shimmer/>):
     (
         <div className="body">
-            <div className="filter">
-                <div>
+            <div className="flex ">
+                <div className='m-4 p-4'>
                     <input 
                         type='text' 
-                        className='search-box' 
+                        className='border border-black' 
                         value={searchText} 
                         onChange={(e)=>setSearchText(e.target.value)}
                     />
                     <button
+                        className='px-4 py-2 bg-green-100 m-4 rounded-lg'
                         onClick={()=>{
                             // Filter the restraunt cards update the UI
                             // searchText
@@ -58,18 +59,21 @@ const Body = () => {
                         Search
                     </button>
                 </div>
-                <button 
-                    className='filter-btn' 
-                    onClick={()=>{
-                        // Filter logic here
-                        const filteredList = listOfRestaurants.filter((res)=>res.info.avgRating>4);
-                        setListOfRestaurants(filteredList)
-                    }}
-                >
-                    Top Rated RestaurantCard
-                </button>
+                <div className='m-4 p-4 flex items-center'>
+                    <button 
+                        className='px-4 py-2 bg-green-100 rounded-lg' 
+                        onClick={()=>{
+                            // Filter logic here
+                            const filteredList = listOfRestaurants.filter((res)=>res.info.avgRating>4);
+                            setListOfRestaurants(filteredList)
+                        }}
+                    >
+                        Top Rated RestaurantCard
+                    </button>
+                </div>
+                
             </div>
-            <div className="res-container">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
                 {filteredRestaurant.map((restaurant)=>(
                     <Link 
                         key={restaurant.info.id} 
