@@ -4,17 +4,16 @@ import { useState } from 'react';
 import { RES_URL } from '../utils/constants';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 
 const Body = () => {
     // Local State Variable - super powerful variable
     const [listOfRestaurants,setListOfRestaurants] = useState([]);
     const [filteredRestaurant,setFilteredRestaurant] = useState([]);
-
+    const onlineStatus = useOnlineStatus();
     const [searchText,setSearchText] = useState("")
 
-    console.log("Body Rendered");
-    
     useEffect(()=>{
         fetchData();
     },[]);
@@ -27,6 +26,13 @@ const Body = () => {
         setListOfRestaurants(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilteredRestaurant(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
+
+    
+    
+    if(onlineStatus === false) 
+        return (
+            <h1>Looks like you're offline!! Please check your internet connection</h1>
+        )
 
     return  listOfRestaurants.length === 0 ? (<Shimmer/>):
     (

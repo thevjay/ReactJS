@@ -101,3 +101,17 @@
  * 
  * - Parent ComponentDidMount
  */
+
+ # Custom hooks:-
+ - 
+
+ # Online && Offline:
+
+ # Chunking
+ # Code Splitting
+ # Dynamic Bundling
+ # on demand loading
+ # Lazy loading :-
+ - dynamic import - const Grocery = lazy(()=> import("./components/Grocery"));
+ - Suspense
+ - fallback
