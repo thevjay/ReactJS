@@ -7,15 +7,15 @@ const User = (props) =>{
 
     useEffect(()=>{
         // API Calls
-        const timer= setInterval(()=>{
-            console.log("Hello REACT OP IN FUNCT")
-        },1000)
-        console.log("useEffect");
+        // const timer= setInterval(()=>{
+        //     console.log("Hello REACT OP IN FUNCT")
+        // },1000)
+        // console.log("useEffect");
 
-        return ()=>{
-            clearInterval(timer);
-            console.log("useEffect return")
-        }
+        // return ()=>{
+        //     clearInterval(timer);
+        //     console.log("useEffect return")
+        // }
 
     },[])
 

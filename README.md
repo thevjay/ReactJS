@@ -121,3 +121,27 @@
 - npx tailwindcss init;
 - - create the .postcssrc file;
 - - extension tailwindcss intellisense
+
+# Custom Hooks
+
+# Context
+- const UserContext = createContext({
+    loggedInUser:"Default User",
+});
+- Access:
+-   - const {loggedInUser} = useContext(UserContext); it gives object
+- Modification: 
+- - <UserContext.Provider value={{loggedInUser:userName}}>
+            <div className="app">
+                <Header/>
+                <Outlet/>
+            </div>
+        </UserContext.Provider>
+- update:
+- -   <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
+- -  const { loggedInUser,setUserName } = useContext(UserContext);
+- - <input 
+        className='border border-black p-2' 
+        value={loggedInUser} 
+        onChange={(e)=>setUserName(e.target.value)}
+     />
