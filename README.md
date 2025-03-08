@@ -145,3 +145,21 @@
         value={loggedInUser} 
         onChange={(e)=>setUserName(e.target.value)}
      />
+
+# Redux :-
+- dispatch - reducer - selector
+- - Install @reduxjs/toolkit and react-redux
+- - Build  our store - appStore configure 
+- - Connect our store to our app - provider to connect
+
+- - Slice (CartSlice)
+- - dispatch(action)
+- - Selector
+
+
+# difference
+- onClick={()=>handleAddItem}
+- onClick={()=>handleAddItem(item)}
+- onClick={handleAddItem(item)}
+
+- - reducer vs reducers
