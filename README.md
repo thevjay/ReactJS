@@ -163,3 +163,21 @@
 - onClick={handleAddItem(item)}
 
 - - reducer vs reducers
+
+
+# Types of testing (devloper)
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e testing
+
+# Test Cases:-
+- Install React Testing Library - npm install -D @testing-library/react
+- Installed jest = npm i -D jest
+- Installed Babel dependencies - npm install --save-dev babel-jest @babel/core @babel/preset-env
+- Configure Babel
+- Configure Parcel Config file to disable default babel transpilation
+- Jest - npx jest --init
+- Install jsdom library
+- Install @babel/preset-react - to make JSX work in test cases
+- Include @babel/preset-react inside my babel config
+- npm i -D @testing-library/jest-dom
