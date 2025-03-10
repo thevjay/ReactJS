@@ -4,7 +4,7 @@ import ItemList from './ItemList';
 const ResCategory = ({data,showItems,setShowIndex,dummy}) => {
     
     //  const [showItems,setShowItems] = useState(false);
-
+    console.log(data)
     const handleClick = () =>{
       // setShowItems(!showItems);
       setShowIndex((prevIndex)=>(prevIndex===showItems ? null : showItems))
