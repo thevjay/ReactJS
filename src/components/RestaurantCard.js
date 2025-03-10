@@ -2,6 +2,9 @@ import React from 'react'
 import { CDN_URL } from '../utils/constants'
 
 const RestaurantCard = ({resData}) => {
+
+    console.log(resData);
+
     const {name,cuisines,cloudinaryImageId,avgRating,costForTwo,deliveryTime} = resData.info;
     
     return(

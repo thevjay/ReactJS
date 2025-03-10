@@ -38,7 +38,7 @@ describe("Contact Us page Test Case",()=>{
         //console.log(inputBoxes.length);
     
         // Assertion
-        expect(inputBoxes.length).not.toBe(3);
+        expect(inputBoxes.length).toBe(2);
     })
 })
 
